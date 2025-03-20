@@ -2,7 +2,7 @@
 GET http://localhost:1234/movies
 
 ### Recuperar una pelicula por id
-GET http://localhost:1234/movies/401620ba-f27d-4868-bc68-1dafc6148fe5
+GET http://localhost:1234/movies/de3cab68-cb7b-4ee4-90a5-c263194e0475
 
 ### Recuperar todas las peliculas por un género
 GET http://localhost:1234/movies?genre=adventure
@@ -25,12 +25,12 @@ Content-Type: application/json
 }
 
 ### Actualizar una pelicula
-PATCH http://localhost:1234/movies/8864f52b-bb7d-4203-b8ad-c8d2a1ed0600
+PATCH http://localhost:1234/movies/de3cab68-cb7b-4ee4-90a5-c263194e0475
 Content-Type: application/json
 
 {
   "year": 2001
 }
 ### Eliminar una pelicula
-DELETE http://localhost:1234/movies/401620ba-f27d-4868-bc68-1dafc6148fe5
+DELETE http://localhost:1234/movies/de3cab68-cb7b-4ee4-90a5-c263194e0475
 

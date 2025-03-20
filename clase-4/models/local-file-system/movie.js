@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto'
-import { readJSON } from '../utils.json'
+import { readJSON } from '../../utils.js'
 
-const movies = readJSON('../movies.json')
+const movies = readJSON('./movies.json')
 
 export class MovieModel {
   static getAll ({ genre }) {
@@ -44,11 +44,10 @@ export class MovieModel {
 
     if (movieIndex === -1) return false
 
-    const updatedMovie = {
+    movies[movieIndex] = {
       ...movies[movieIndex],
       ...input
     }
-
-    movies[movieIndex] = updatedMovie
+    return movies[movieIndex]
   }
 }
