@@ -1,0 +1,37 @@
+### Recuperar todas las peliculas
+GET http://localhost:1234/movies
+
+### Recuperar una pelicula por id
+GET http://localhost:1234/movies/1d3b9cb5-0c2c-11f0-9e1a-18c04d30b5d8
+
+### Recuperar todas las peliculas por un género
+GET http://localhost:1234/movies?genre=adventure
+
+### Crear una pelicula
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": 1990,
+    "director": "Peter Jackson",
+    "duration": 178,
+    "poster": "https://www.imdb.com/title/tt0120737/mediaviewer/rm2487634432/",
+    "genre": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ]
+}
+
+### Actualizar una pelicula
+PATCH http://localhost:1234/movies/1d3b9cb5-0c2c-11f0-9e1a-18c04d30b5d8
+Content-Type: application/json
+
+{
+  "title": "El lord de los Rings: The Fellowship of the Ring",
+  "year": 2002
+}
+### Eliminar una pelicula
+DELETE http://localhost:1234/movies/67c67b8e-0c2b-11f0-9e1a-18c04d30b5d8
+
